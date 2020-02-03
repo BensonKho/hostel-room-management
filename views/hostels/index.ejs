@@ -1,0 +1,62 @@
+<% include ../partials/header.ejs %>
+
+
+
+
+<h1 style="margin-top : 5em;" align="center">ALLOCATED ROOMS</h1>
+<h1 align="center"><%= block %> BLOCK </h1>
+<% if(CurrentUser && !CurrentUser.isAdmin){ %> 
+<div align="center">
+<div class="ui animated button black" tabindex="0">
+	<div class="visible content">APPLY NOW</div>
+  <div class="hidden content">
+	  <a href="/hostels/<%= block %>/new"><i class="right arrow icon red"></i></a>
+  </div>
+</div>
+</div>
+<% } %>
+
+ <% rooms.forEach(function(room){ %>
+
+<!-- <h1 align="center"><%= room.block %> BLOCK </h1>
+	 
+<div align="center">
+<div class="ui animated button black" tabindex="0">
+	<div class="visible content">APPLY NOW</div>
+  <div class="hidden content">
+	  <a href="/hostels/<%= room.block %>/new"><i class="right arrow icon red"></i></a>
+  </div>
+</div>
+</div>
+	 -->
+<table class="ui striped table" >
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Room Allocated</th>
+      <th>E-mail</th>
+      <th>More Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+ 
+	<tr>
+		<td><%= room.name %></td>
+		<td><%= room.proom %></td>
+		<td><%= room.email %></td>
+		<td><a href="/hostels/<%= room.block %>/student/<%= room._id %>">More info</a></td>
+	</tr>
+
+<% }) %>
+    </tr>
+  </tbody>
+</table>
+
+	  
+
+
+
+
+<% include ../partials/footer.ejs %>
+

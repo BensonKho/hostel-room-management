@@ -1,0 +1,159 @@
+<% include ../partials/header.ejs %>
+
+
+
+
+
+
+<div style="margin-top: 7em;">
+<h1 class="ui center aligned icon header" style="font-family: 'Francois One', sans-serif;">
+  <i class="circular building icon"></i>
+	SELECT YOUR PREFERRED BLOCK
+</h1>
+</div>
+<h3 align="center">Signed In As <%= CurrentUser.username %></h3>
+<div class="ui container" style="margin-top: 5em;">
+<div class="ui four column grid">
+  <div class="row">
+    <div id="cs" class="column">
+					<div style="margin-top : 5em;" align="center">
+					 <div class="ui special cards">
+				  <div class="card">
+					<div class="blurring dimmable image">
+					  <div class="ui dimmer">
+						<div class="content">
+						  <div class="center">
+							  <% if(CurrentUser && CurrentUser.isAdmin){ %>
+							  <a href="/hostels/M" class="ui inverted button">Allocated Rooms</a>
+							  <% }else{ %>
+							  <a href="/hostels/M" class="ui inverted button">Apply Now</a>
+							  <% } %>
+						  </div>
+						</div>
+					  </div>
+					  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9eK6TS8cGbP3mBb2K5zCoknyH3NZgQrfudJvD8tlG0oTFb_gW&s">
+					</div>
+					<div class="content">
+					  <a class="header">M BLOCK</a>
+					</div>
+					<div class="extra content">
+					  <a>
+						<i class="warehouse icon"></i>
+						60 rooms
+					  </a>
+					</div>
+				  </div>	
+				</div>
+				</div>
+
+	  
+	  </div>
+    <div id="cs" class="column">
+	  					<div style="margin-top : 5em;" align="center">
+					 <div class="ui special cards">
+				  <div class="card">
+					<div class="blurring dimmable image">
+					  <div class="ui dimmer">
+						<div class="content">
+						  <div class="center">
+							  <% if(CurrentUser && CurrentUser.isAdmin){ %>
+							  <a href="/hostels/L" class="ui inverted button">Allocated Rooms</a>
+							  <% }else{ %>
+							  <a href="/hostels/L" class="ui inverted button">Apply Now</a>
+							  <% } %>
+						  </div>
+						</div>
+					  </div>
+					  <img src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-2-5d-building-2-5d-bungalow-building-bungalow-png-image_3920651.jpg">
+					</div>
+					<div class="content">
+					  <a class="header">L BLOCK</a>
+					</div>
+					<div class="extra content">
+					  <a>
+						<i class="warehouse icon"></i>
+						60 rooms
+					  </a>
+					</div>
+				  </div>	
+				</div>
+				</div>
+	  
+	  
+	  </div>
+    <div id="cs" class="column">
+	  					<div style="margin-top : 5em;" align="center">
+					 <div class="ui special cards">
+				  <div class="card">
+					<div class="blurring dimmable image">
+					  <div class="ui dimmer">
+						<div class="content">
+						  <div class="center">
+							  <% if(CurrentUser && CurrentUser.isAdmin){ %>
+							  <a href="/hostels/H" class="ui inverted button">Allocated Rooms</a>
+							  <% }else{ %>
+							  <a href="/hostels/H" class="ui inverted button">Apply Now</a>
+							  <% } %>
+						  </div>
+						</div>
+					  </div>
+					  <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-hand-drawn-cartoon-city-buildings-tall-building-elements-buildingcartoonbuildingcitytrafficindicator-lighttrash-candesign-png-image_4037068.jpg">
+					</div>
+					<div class="content">
+					  <a class="header">H BLOCK</a>
+					</div>
+					<div class="extra content">
+					  <a>
+						<i class="warehouse icon"></i>
+						60 rooms
+					  </a>
+					</div>
+				  </div>	
+				</div>
+				</div>
+	  
+	  
+	  </div>
+	  <div id="cs" class="column">
+	  						<div style="margin-top : 5em;" align="center">
+					 <div class="ui special cards">
+				  <div class="card">
+					<div class="blurring dimmable image">
+					  <div class="ui dimmer">
+						<div class="content">
+						  <div class="center">
+							  <% if(CurrentUser && CurrentUser.isAdmin){ %>
+							  <a href="/hostels/GH" class="ui inverted button">Allocated Rooms</a>
+							  <% }else{ %>
+							  <a href="/hostels/GH" class="ui inverted button">Apply Now</a>
+							  <% } %>
+						  </div>
+						</div>
+					  </div>
+					  <img src="https://previews.123rf.com/images/vintagio/vintagio1511/vintagio151100027/48931828-brick-apartment-building-with-cartoon-looks-vibrant-color.jpg">
+					</div>
+					<div class="content">
+					  <a class="header">GH BLOCK</a>
+					</div>
+					<div class="extra content">
+					  <a>
+						<i class="warehouse icon"></i>
+						60 rooms
+					  </a>
+					</div>
+				  </div>	
+				</div>
+				</div>
+	  
+	  
+	  
+	  </div>
+  </div>
+</div>
+</div>
+
+<script>
+$('.special.cards .image').dimmer({
+  on: 'hover'
+});
+</script>

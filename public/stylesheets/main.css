@@ -1,0 +1,43 @@
+i.icon {
+	font-size: 2em;
+}
+
+.show.container.raised {
+	margin-top: 7.0em;
+}
+
+
+.lefttable{
+	max-height: 400px;
+	overflow:scroll;
+}
+.centertable{
+	max-height: 400px;
+	overflow:scroll;
+}
+
+.row {
+  display: flex;
+}
+
+.anuj{
+  /* flex: 50%; */
+  margin-left : 100px;
+  margin-right: 100px;
+	margin-top: 100px;
+}
+#cs{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#thumbnail{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 200px;
+  height: 250px;
+}
+#but{
+	padding-left: 220px;
+	padding-right: 220px;
+}

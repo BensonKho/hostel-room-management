@@ -1,0 +1,74 @@
+
+<html>
+	<head>
+		<title>Hostel allotment</title>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type ="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type ="text/css" href="/stylesheets/main.css">
+		<link rel="stylesheet" type ="text/css" href="/stylesheets/landing.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	</head>
+	<body>
+		
+		<!-- <div class="ui fixed inverted menu">
+			<div class= "ui container">
+				<div class ="header item"><i class="building icon"></i>HMS</div>
+			
+				<a href="/" class="item">Home</a>
+				<a href="/room/new" class="item">Apply</a>
+			</div>
+		</div>
+		 -->
+		
+		
+						<div class="ui inverted segment">
+  							<div class="ui inverted secondary menu">
+								<i class="building icon" style="padding-top : 0.5em;">
+								  
+								</i>
+								<a href="/hostels" class="item">
+								  Home
+								</a>
+								<a href="/logout" class="item" >
+								  Logout
+								</a>
+								<% if(CurrentUser && CurrentUser.isAdmin){ %>
+								<a href="/swap" class="item" >
+								  Notifications
+								</a>
+								<% } %>
+						    </div>
+						</div>
+		
+		<div class="container">
+			<% if(error && error.length > 0){ %>
+		<div class="alert alert-danger" role="alert">
+			<%= error %>
+		</div>
+			<% } %>
+			<% if(success && success.length > 0){ %>
+		<div class="alert alert-success" role="alert">
+			<%= success %>
+		</div>
+			<% } %>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+	
+</html>
+
+
+
+

@@ -1,0 +1,23 @@
+
+<% include ../partials/header.ejs %>
+
+<div class=" show ui raised very padded text container segment">
+  <img  class="ui medium circular image" src="https://avatarfiles.alphacoders.com/945/94560.png" align="right">
+  <h2 class="ui header"><%= room.name %></h2>
+  <p>USN : <%= room.owner.usn %></p>
+  <p>Year : <%= room.year %></p>
+  <p>Department : <%= room.department %></p>
+  <p>Contact Number : <%= room.contact %></p>
+  <p>email address : <%= room.email %></p>
+</div>
+<div id="but" class="ui container ">
+	<% if(CurrentUser && !CurrentUser.isAdmin && room.owner.id.equals(CurrentUser._id)){ %>
+	<a href="/swap/<%= room._id %>/new"><div class="ui bottom attached button blue" tabindex="0"><h4>APPLY FOR SWAP</h4></div></a>
+</div>
+<% } %>
+<% if(CurrentUser && CurrentUser.isAdmin){ %>
+<div id="but" class="ui container " style="padding-top:1em;">
+	<a href="/hostels/<%= room.block %>/student/<%= room._id %>/new"><div class="ui bottom attached button blue" tabindex="0"><h4>UPDATE ROOM</h4></div></a>
+</div>
+<% } %>
+

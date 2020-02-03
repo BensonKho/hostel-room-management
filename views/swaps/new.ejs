@@ -1,0 +1,20 @@
+<% include ../partials/header.ejs %>
+<div class = "ui main text container segment" style="margin-top : 10em;">
+	<div class="ui huge header" align="center">SWAP FORM</div>
+<form class="ui form" action="/swap/<%= x.block %>" method="POST">
+	<div class="field">
+		<label>USN</label>
+		<input type="text" name="usn" value="<%= x.owner.usn %>" readonly>
+	</div>
+	<div class="field">
+		<label>Current Room</label>
+		<input type="text" name="room" value="<%= x.proom %>" readonly>
+	</div>
+	<div class="field">
+		<label>Description</label>
+		<textarea name="description" placeholder="Write Room No. to swap with and reason" ></textarea>
+		<div align="center" style="padding-top : 2em;"><button class="ui button blue">SUBMIT</button></div>
+	</div>
+
+</form>
+</div>

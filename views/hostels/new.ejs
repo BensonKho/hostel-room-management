@@ -1,0 +1,46 @@
+<% include ../partials/header.ejs %>
+
+<div class = "ui main text container segment" style="margin-top: 3em;">
+	<div class="ui huge header" align="center">New Room Alottment</div>
+	<form class ="ui form" action="/hostels/<%= block %>" method="POST">
+		<div class="field">
+			<label>Name</label>
+			<input type="text" name="name" placeholder="Name">
+		</div>
+		<!-- <div class="field">
+			<label>USN</label>
+			<input type="text" name="room[usn]" placeholder="usn" value="" readonly>
+		</div> -->
+		<div class="field">
+			<label>Year</label>
+			<input type="text" name="year" placeholder="year">
+		</div>
+		<div class="field">
+			<label>Department</label>
+			<input type="text" name="department" placeholder="department">
+		</div>
+		<div class="field">
+			<label>Block</label>
+			<input type="text" name="block" placeholder="Block No" value="<%= block %>" readonly>
+		</div>
+		<div class="field">
+			<label>Preferred Room</label>
+			<input type="number" name="proom" placeholder="room number">
+		</div>
+		<div class="field">
+			<label>Email Address</label>
+			<input type="email" name="email" placeholder="email address">
+		</div>
+		<div class="field">
+			<label>Contact Number</label>
+			<input type="number" name="contact" placeholder="contact number">
+		</div>
+		
+		
+		<div align="center"><button class="ui primary button">SUBMIT</button></div>
+	</form>
+</div>
+
+
+
+<% include ../partials/footer.ejs %>
